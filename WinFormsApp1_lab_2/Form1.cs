@@ -4,7 +4,7 @@ namespace WinFormsApp1_lab_2
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();//testfix
         }
     }
 }
