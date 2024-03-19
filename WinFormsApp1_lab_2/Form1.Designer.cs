@@ -31,25 +31,27 @@
             button1 = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtBoxMoney = new TextBox();
+            label1 = new Label();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(12, 118);
+            button1.Location = new Point(15, 128);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(305, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Конвертировать деньги";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(label2);
             flowLayoutPanel1.Location = new Point(12, 12);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(200, 100);
+            flowLayoutPanel1.Size = new Size(308, 80);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // label2
@@ -57,28 +59,39 @@
             label2.AutoSize = true;
             label2.Location = new Point(3, 0);
             label2.Name = "label2";
-            label2.Size = new Size(194, 30);
+            label2.Size = new Size(300, 75);
             label2.TabIndex = 2;
-            label2.Text = "label2fffffffffffffffffffffffffffffffffffffffffffffff";
+            label2.Text = "Дано натуральное число 1<=n<=9999, определяющее стоимость товара в копейках. Выразить стоимость в рублях и копейках, например, 3 рубля 21 копейка, 15 рублей 5 копеек, 1 рубль ровно и т. п.";
             label2.Click += label2_Click;
             // 
-            // textBox1
+            // txtBoxMoney
             // 
-            textBox1.Location = new Point(109, 118);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
+            txtBoxMoney.Location = new Point(118, 99);
+            txtBoxMoney.Name = "txtBoxMoney";
+            txtBoxMoney.Size = new Size(197, 23);
+            txtBoxMoney.TabIndex = 2;
+            txtBoxMoney.KeyDown += txtBoxMoney_KeyDown;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(19, 102);
+            label1.Name = "label1";
+            label1.Size = new Size(93, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Введите деньги:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            ClientSize = new Size(332, 161);
+            Controls.Add(label1);
+            Controls.Add(txtBoxMoney);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Расчитать рубли и  копейки";
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
@@ -90,6 +103,7 @@
         private Button button1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtBoxMoney;
+        private Label label1;
     }
 }

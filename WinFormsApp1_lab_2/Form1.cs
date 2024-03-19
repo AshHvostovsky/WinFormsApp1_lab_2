@@ -5,6 +5,8 @@ namespace WinFormsApp1_lab_2
         public Form1()
         {
             InitializeComponent();
+            // Ставим положение формы по центру при запуске
+            this.StartPosition = FormStartPosition.CenterScreen;
             // считывем значения из настроек
             txtBoxMoney.Text = Properties.Settings.Default.money_in.ToString();
         }
@@ -56,6 +58,7 @@ namespace WinFormsApp1_lab_2
         {
 
         }
+
     }
     public class Logic
     {
