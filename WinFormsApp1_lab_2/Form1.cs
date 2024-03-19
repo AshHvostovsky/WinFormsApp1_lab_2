@@ -15,16 +15,13 @@ namespace WinFormsApp1_lab_2
             int money_in = 0;
             try
             { // оборачиваем кусок кода склонный к падению
-              // Ёто должно показать сообщение с текстом
                 money_in = int.Parse(this.txtBoxMoney.Text);
-
             }
             catch (FormatException)
             {
                 txtBoxMoney.Text = "";
                 MessageBox.Show("Ќеверно введены данные", "–езультат");
                 returnFocus();
-
                 return;
             }
             string msg = Logic.GetOutput(money_in);
@@ -32,17 +29,17 @@ namespace WinFormsApp1_lab_2
             MessageBox.Show(msg, "–езультат");
             returnFocus();
 
-
             //  передаем введенные значени€ в параметры
             Properties.Settings.Default.money_in = money_in;
-            Properties.Settings.Default.Save(); // сохран€ем переданные значени€, чтобы они восстановились пре очередном запуске
+            // сохран€ем переданные значени€, чтобы они восстановились пре очередном запуске
+            Properties.Settings.Default.Save();
         }
 
         private void returnFocus()
         {
-            txtBoxMoney.Focus(); // ”станавливаем фокус обратно на текстовое поле
+            // ”станавливаем фокус обратно на текстовое поле
+            txtBoxMoney.Focus(); 
         }
-
 
         private void txtBoxMoney_KeyDown(object sender, KeyEventArgs e)
         {
@@ -50,15 +47,8 @@ namespace WinFormsApp1_lab_2
             {
                 //button1_Click(this, e);
                 SelectNextControl((Control)sender, true, true, true, true);
-                
             }
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             txtBoxMoney.Text = "";
