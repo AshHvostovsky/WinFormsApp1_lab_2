@@ -31,7 +31,6 @@ namespace WinFormsApp1_lab_2
             // выведем сообщение
             MessageBox.Show(msg, "Результат");
             returnFocus();
-            txtBoxMoney.Text = "";
 
 
             //  передаем введенные значения в параметры
@@ -51,6 +50,7 @@ namespace WinFormsApp1_lab_2
             {
                 //button1_Click(this, e);
                 SelectNextControl((Control)sender, true, true, true, true);
+                
             }
         }
 
@@ -59,6 +59,10 @@ namespace WinFormsApp1_lab_2
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtBoxMoney.Text = "";
+        }
     }
     public class Logic
     {
